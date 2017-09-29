@@ -1,0 +1,21 @@
+{
+  "name":"learn_frame PHP",
+  "description":"PHP Framework",
+  "type":"Framework",
+  "key":[
+    "PHP", "PHP Framework", "Framework"
+  ],
+  "require":{
+    "PHP":">= 5.3.0",
+    "filp/whoops":"*",
+    "symfony/var-dumper":"*",
+    "catfan/medoo":"*",
+    "twig/twig":"*"
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+  }
+}

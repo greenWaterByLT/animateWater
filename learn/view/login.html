@@ -1,0 +1,36 @@
+{% extends '/base.html' %}
+
+{% block title %} {{ title|default('blueSkyLearn') }} {% endblock %}
+{% block headSet %}
+<link rel="stylesheet" type="text/css" href="{{ root }}/css/login/login.css">
+<script type="text/javascript" src="{{ root }}/js/login/login.js"></script>
+{% endblock %}
+
+{% block body %}
+<div class="zhuce_body">
+    <div class="logo"><a href="/index"><img src="{{ root }}/images/login/logo-2.png" width="114" height="54" border="0"></a></div>
+    <div class="zhuce_kong">
+        <form action="#" method="post" name="login" class="login">
+            <div class="zc">
+                <div class="bj_bai">
+                    <h3>登录</h3>
+                    <input class="username kuang_txt" type="text" name="userName" placeholder="邮箱/会员帐号/手机号" value="litian" autofocus required>
+                    <input class="password kuang_txt" type="password" name="password" placeholder="请输入密码" required>
+                    <div>
+                        <a href="javascript:;" onclick="forgetPassword();">忘记密码？</a><input name="" type="checkbox" value="" checked><span>记住我</span>
+                    </div>
+                    <input type="button" class="loginSubmit btn_zhuce" value="登录">
+                </div>
+                <div class="bj_right">
+                    <p>使用以下账号直接登录</p>
+                    <a href="/index/index" class="zhuce_qq">QQ登录</a>
+                    <a href="/index/index" class="zhuce_wb">微博登录</a>
+                    <a href="/index/index" class="zhuce_wx">微信登录</a>
+                    <p>没有账号？<a href="/index/register">立即注册</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+{% endblock %}
