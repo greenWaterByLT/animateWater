@@ -7,6 +7,7 @@
  */
 namespace core;
 
+use \core\lib\route;
 use including\service\LogService;
 
 class imooc{
@@ -16,7 +17,7 @@ class imooc{
     static public function run()
     {
         //LogService::fileLog();  //页面访问日志
-        $route = new \core\lib\route();     //路由
+        $route = new route();     //路由
         $controller = $route->_controller;
         $action = $route->_action;
         //检测控制器文件是否存在
@@ -93,15 +94,10 @@ class imooc{
             $hash = empty($hash) ? array() : $hash;
             $result = array_merge($assign, $hash);
 
-            //twig模板引擎
-            \Twig_Autoloader::register();
-            $loader = new \Twig_Loader_Filesystem(APP.'/view');
-            $twig = new \Twig_Environment($loader, array(
-                    'cache' => CACHE,
-                    'debug' => DEBUG
-            ));
+            //加载模板引擎，默认Twig
+            $modelObj = displayModelLoad();
 
-            $template = $twig->loadTemplate($file);
+            $template = $modelObj->loadTemplate($file);
             $template->display($result?$result:'');
         }
     }

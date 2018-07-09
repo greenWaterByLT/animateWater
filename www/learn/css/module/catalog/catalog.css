@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#wrap {
+    height: 800px;
+    width: 1300px;
+    /*border: 1px solid red;*/
+    /*小球设置相对定位*/
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    background: -webkit-linear-gradient(top center, #fff, #5cabff);
+    background: -moz-linear-gradient(top center, #fff, #5cabff);
+    background: linear-gradient(top center, #fff, #5cabff);
+}
+.ball {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+    background: -webkit-radial-gradient(circle,#fff 10%,#bce4d3 60%, #69a3bf 80%);
+    background: -moz-radial-gradient(circle,#fff 10%,#bce4d3 60%, #69a3bf 80%);
+    background: radial-gradient(circle,#fff 10%,#bce4d3 60%, #69a3bf 80%);
+}

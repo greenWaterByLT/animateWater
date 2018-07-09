@@ -32,6 +32,9 @@ if(DEBUG){
 
 include CORE.'/common/function.php';        //加载函数库
 
+include CORE.'/common/classLoad.php';        //加载配置函数库
+
+
 include CORE.'/imooc.php';
 
 //自动加载类

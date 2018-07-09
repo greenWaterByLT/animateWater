@@ -1,0 +1,24 @@
+/* 小球 容器 canvas 自适应屏幕大小  */
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+canvas {
+    display: block;
+    background-color: #D6F8FF;
+}
+
+.test{
+    position: absolute;
+    color: #00c800;
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+    line-height: 100px;
+    height: 100px;
+    font-family: 华文彩云;
+}

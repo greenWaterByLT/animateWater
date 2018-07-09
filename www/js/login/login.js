@@ -27,11 +27,11 @@ $(function() {
             alert(msg);
             return false;
         }
-        var passwordRes = checkPassword(password);
+        /*var passwordRes = checkPassword(password);
         if(passwordRes){
             alert(passwordRes);
             return false;
-        }
+        }*/
 
         $.ajax({
             'url': '/index/index',

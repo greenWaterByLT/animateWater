@@ -9,7 +9,10 @@ namespace learn\controller;
 
 use core\lib\my\controller;
 use including\model;
+use including\model\userModel;
+use including\service;
 use including\service\PublicService;
+
 
 class indexController extends controller
 {
@@ -22,7 +25,7 @@ class indexController extends controller
             $userName = PublicService::stringDealBeforeSql($userName);
             $code = 0;
             if(!empty($userName) && !empty($password)){
-                $userModel = new model\userModel();
+                $userModel = new userModel();
                 $userInfo = $userModel->find(array('user_name' => $userName), array());
                 if(!empty($userInfo)){
                     if(isset($userInfo['password']) && $userInfo['password'] == $password) {
@@ -53,9 +56,9 @@ class indexController extends controller
         $this->display($hash, 'register.html');
     }
 
+
     public function catalog()
     {
-
         $hash['title'] = '目录';
         $this->display($hash, 'catalog.html');
     }

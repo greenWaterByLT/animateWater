@@ -1,10 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>目录</title>
-</head>
-<body>
+{% extends '/base.html' %}
 
-</body>
-</html>
+{% block title %} {{ title|default('blueSkyLearn') }} {% endblock %}
+{% block headSet %}
+<link rel="stylesheet" type="text/css" href="{{ root }}/learn/css/module/catalog/catalog.css">
+<script type="text/javascript" src="{{ root }}/learn/js/module/catalog/ball.js"></script>
+{% endblock %}
+
+{% block body %}
+<div id="wrap">
+
+</div>
+<script type="text/javascript">
+	ballFun.config = {
+		ballNum:10,         //小球总数
+		r:60,               //小球半径
+		ballClass:'',   	//小球样式
+		ballMinSpeed:1,     //小球最小速度
+		ballMaxSpeed:4,     //小球最大速度
+		isBackColor:false,   //小球背景颜色是否随机
+		innerHTML:false,    //小球内部HTML
+		opacity:1,           //小球透明度
+	};
+
+	ballFun.init('wrap');
+</script>
+{% endblock %}
+
+

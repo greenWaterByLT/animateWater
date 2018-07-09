@@ -1,0 +1,26 @@
+{% extends '/base.html' %}
+
+{% block title %} {{ title|default('blueSkyLearn') }} {% endblock %}
+{% block headSet %}
+<link rel="stylesheet" type="text/css" href="{{ root }}/learn/css/ball.css">
+<script type="text/javascript" src="{{ root }}/learn/js/ball-canvas.js"></script>
+{% endblock %}
+
+{% block body %}
+<div class="test">
+    小球碰撞
+</div>
+<canvas id="ball" width="400" height="200"></canvas>
+<script type="text/javascript">
+    //添加窗口尺寸改变响应监听
+    $(window).resize(resizeCanvas);
+    //页面加载后先设置一下canvas大小
+    resizeCanvas();
+
+    //窗口尺寸改变响应（修改canvas大小）
+    function resizeCanvas() {
+        $("#ball").attr("width", $(window).get(0).innerWidth);
+        $("#ball").attr("height", $(window).get(0).innerHeight);
+    };
+</script>
+{% endblock %}

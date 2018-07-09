@@ -1,6 +1,12 @@
 /**
  * Created by litian on 2017/9/8.
  */
+
+/**
+ * 检测字符串是否为空
+ * @param string
+ * @returns {boolean}
+ */
 function checkIsEmpty(string)
 {
     string = $.trim(string);
@@ -9,3 +15,4 @@ function checkIsEmpty(string)
     }
     return true;
 }
+

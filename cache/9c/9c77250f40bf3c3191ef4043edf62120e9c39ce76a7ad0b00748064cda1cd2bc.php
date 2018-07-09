@@ -52,9 +52,10 @@ class __TwigTemplate_0a512f1f77b0a4dab1afa24eece536206834bdaac1e9657fa157ed0d921
     public function block_body($context, array $blocks = array())
     {
         // line 10
-        echo "<div class=\"zhuce_body\">
+        echo "
+<div class=\"zhuce_body\">
     <div class=\"logo\"><a href=\"/index\"><img src=\"";
-        // line 11
+        // line 12
         echo twig_escape_filter($this->env, (isset($context["root"]) ? $context["root"] : null), "html", null, true);
         echo "/images/login/logo-2.png\" width=\"114\" height=\"54\" border=\"0\"></a></div>
     <div class=\"zhuce_kong\">
@@ -64,12 +65,12 @@ class __TwigTemplate_0a512f1f77b0a4dab1afa24eece536206834bdaac1e9657fa157ed0d921
                     <h3>登录</h3>
                     <input class=\"username kuang_txt\" type=\"text\" name=\"userName\" placeholder=\"邮箱/会员帐号/手机号\" value=\"litian\" autofocus required>
                     <input class=\"password kuang_txt\" type=\"password\" name=\"password\" placeholder=\"请输入密码\" required>
-                    <div>
-                        <a href=\"javascript:;\" onclick=\"forgetPassword();\">忘记密码？</a><input name=\"\" type=\"checkbox\" value=\"\" checked><span>记住我</span>
+                    <div class=\"remark\">
+                        <a href=\"javascript:;\" onclick=\"forgetPassword();\">显示密码？</a><input name=\"\" type=\"checkbox\" value=\"\" checked><span>记住我</span>
                     </div>
                     <input type=\"button\" class=\"loginSubmit btn_zhuce\" value=\"登录\">
                 </div>
-                <div class=\"bj_right\">
+                <div class=\"bj_right\" style=\"display: none;\">
                     <p>使用以下账号直接登录</p>
                     <a href=\"/index/index\" class=\"zhuce_qq\">QQ登录</a>
                     <a href=\"/index/index\" class=\"zhuce_wb\">微博登录</a>
@@ -96,7 +97,7 @@ class __TwigTemplate_0a512f1f77b0a4dab1afa24eece536206834bdaac1e9657fa157ed0d921
 
     public function getDebugInfo()
     {
-        return array (  58 => 11,  55 => 10,  52 => 9,  46 => 6,  41 => 5,  38 => 4,  30 => 3,  11 => 1,);
+        return array (  59 => 12,  55 => 10,  52 => 9,  46 => 6,  41 => 5,  38 => 4,  30 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -118,6 +119,7 @@ class __TwigTemplate_0a512f1f77b0a4dab1afa24eece536206834bdaac1e9657fa157ed0d921
 {% endblock %}
 
 {% block body %}
+
 <div class=\"zhuce_body\">
     <div class=\"logo\"><a href=\"/index\"><img src=\"{{ root }}/images/login/logo-2.png\" width=\"114\" height=\"54\" border=\"0\"></a></div>
     <div class=\"zhuce_kong\">
@@ -127,12 +129,12 @@ class __TwigTemplate_0a512f1f77b0a4dab1afa24eece536206834bdaac1e9657fa157ed0d921
                     <h3>登录</h3>
                     <input class=\"username kuang_txt\" type=\"text\" name=\"userName\" placeholder=\"邮箱/会员帐号/手机号\" value=\"litian\" autofocus required>
                     <input class=\"password kuang_txt\" type=\"password\" name=\"password\" placeholder=\"请输入密码\" required>
-                    <div>
-                        <a href=\"javascript:;\" onclick=\"forgetPassword();\">忘记密码？</a><input name=\"\" type=\"checkbox\" value=\"\" checked><span>记住我</span>
+                    <div class=\"remark\">
+                        <a href=\"javascript:;\" onclick=\"forgetPassword();\">显示密码？</a><input name=\"\" type=\"checkbox\" value=\"\" checked><span>记住我</span>
                     </div>
                     <input type=\"button\" class=\"loginSubmit btn_zhuce\" value=\"登录\">
                 </div>
-                <div class=\"bj_right\">
+                <div class=\"bj_right\" style=\"display: none;\">
                     <p>使用以下账号直接登录</p>
                     <a href=\"/index/index\" class=\"zhuce_qq\">QQ登录</a>
                     <a href=\"/index/index\" class=\"zhuce_wb\">微博登录</a>

@@ -41,6 +41,8 @@ class route{
             $this->_controller = $pathArr[0];
         }
         $this->_action = isset($pathArr[1]) ? $pathArr[1] : config::getConfig('ACTION', 'route');
+        //action 解析
+        $this->actionAnalysis();
     }
 
     private function urlAnalysis1($path)
@@ -66,5 +68,21 @@ class route{
             $i = $f + 1;
             $count -= 2;
         };
+        //action 解析
+        $this->actionAnalysis();
+    }
+
+    private function actionAnalysis()
+    {
+        /* get-data 这类action解析 将-后的字母改成大写 */
+        $action = $this->_action;
+        $actionArr = empty($action) ? array() : explode('-', $action);
+        if(!empty($actionArr) && count($actionArr) > 1){
+            $actionStr = '';
+            foreach($actionArr as $k => $v){
+                $actionStr .= $k > 0 ? ucfirst($v) : $v;
+            }
+            $this->_action = $actionStr;
+        }
     }
 }

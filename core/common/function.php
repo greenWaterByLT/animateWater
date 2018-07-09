@@ -6,7 +6,11 @@
  * Time: 14:42
  */
 
-
+/**
+ * @param $var
+ * @param bool $bool    true - 打印phpinfo()， false打印var参数
+ * 打印数据
+ */
 function p($var, $bool = false)
 {
     if($bool){

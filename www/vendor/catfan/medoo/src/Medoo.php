@@ -225,7 +225,6 @@ class Medoo
 				$options['password'],
 				$this->option
 			);
-
 			foreach ($commands as $value)
 			{
 				$this->pdo->exec($value);

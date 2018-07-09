@@ -1,0 +1,69 @@
+{% extends '/base.html' %}
+
+{% block title %} {{ title|default('blueSkyLearn') }} {% endblock %}
+{% block headSet %}
+<link rel="stylesheet" type="text/css" href="{{ root }}/learn/css/module/create_ball.css"/>
+{% endblock %}
+
+{% block body %}
+<div class="block1">
+    <label class="title">基本形状</label>
+    <figure class="circle0"></figure>
+</div>
+
+<div class="block">
+    <label class="title">径向渐变</label>
+    <figure class="circle1"></figure>
+</div>
+
+<div class="block">
+    <label class="title">阴影和 3D</label>
+    <section class="stage">
+        <figure class="ball"><span class="shadow"></span></figure>
+    </section>
+</div>
+
+<div class="block">
+    <label class="title">多层阴影</label>
+    <section class="stage">
+        <figure class="ball ball1"><span class="shadow"></span></figure>
+    </section>
+</div>
+
+<div class="block">
+    <label class="title">光照效果</label>
+    <section class="stage">
+        <figure class="ball ball2"><span class="shadow"></span></figure>
+    </section>
+</div>
+
+<div class="block">
+    <label class="title">8 号球效果</label>
+    <section class="stage">
+        <figure class="ball ball3">
+            <span class="shadow"></span>
+            <span class="eight"></span>
+        </figure>
+    </section>
+</div>
+
+<div class="block">
+    <label class="title">眼球效果</label>
+    <section class="stage">
+        <figure class="ball ball4">
+            <span class="shadow"></span>
+            <span class="iris"></span>
+        </figure>
+    </section>
+</div>
+
+<div class="block">
+    <label class="title">会动的眼球</label>
+    <section class="stage">
+        <figure class="ball ball4">
+            <span class="shadow"></span>
+            <span class="iris iris1"></span>
+        </figure>
+    </section>
+</div>
+{% endblock %}

@@ -13,6 +13,13 @@ class controller extends imooc
     public function __construct()
     {
         $this->assign('root', '/www');
+        //登录判断
+        /*$isLogin = $_SESSION['uid'];
+        if($isLogin){
+
+        }else{
+            var_dump('先登录再说');
+        }*/
     }
 
     public function _request($param)
