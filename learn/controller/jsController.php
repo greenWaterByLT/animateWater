@@ -14,7 +14,7 @@ class jsController extends controller
 {
     function index()
     {
-
+    	
     }
 
     function ball()
