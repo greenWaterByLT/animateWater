@@ -26,6 +26,13 @@ function p($var, $bool = false)
     }
 }
 
+/**
+ * @param  [type]  $var   [description]
+ * @param  [type]  $title [description]
+ * @param  boolean $bool  [description]
+ * @return [type]         [description]
+ * 打印数据 用#间隔并给出每段打印数据名称
+ */
 function p_r($var, $title, $bool = false)
 {
     echo "###################################" . $title . "##################################</br></br>";
