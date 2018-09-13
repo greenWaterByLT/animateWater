@@ -22,4 +22,10 @@ class jsController extends controller
         $hash['title'] = '小球碰撞';
         $this->display($hash, 'js/ball_collision.html');
     }
+
+    function canvas()
+    {
+        $hash['title'] = '图片文字合成一张图片';
+        $this->display($hash, 'js/canvas.html');
+    }
 }
