@@ -4,6 +4,8 @@
  * User: litian
  * Date: 2018/9/29
  * Time: 16:44
+ * 腳本：
+ * 常量定義（__STRING__）
  */
 
     //设置时区
@@ -15,9 +17,16 @@
 	ini_set("max_execution_time","0");
 	ini_set("memory_limit", "4000M");
 	ini_set('display_errors','On');	error_reporting(E_ALL ^ E_NOTICE);
-	define("__ROOT__",dirname(dirname(__FILE__)));
-    //扩展引入文件
-    define("__CORE__", dirname(__ROOT__) . "/core");
+
+	//脚本常量定义
+	define("__ROOT__",dirname(dirname(__FILE__)));      //脚本根路径
+
+    define("__CORE__", dirname(__ROOT__) . "/core");    //扩展引入文件
+
+    define("__DIR_LOG__", CRON.'/log/');    //脚本日志路径
+
+    //引入常量配置文件
+    include __CORE__ . '/define.php';
 
 /*
 	//检查分布配置是否存在
@@ -33,17 +42,6 @@
 
 	//print_r($_SERVER);
 
-	define("DIR_LOG", CRON.'/log/');
-
 	ob_flush();
-
-
-	//写日志函数
-	function ll($txt,$fileTag='') {
-        $fileTag = basename($_SERVER['PHP_SELF'],'.php');
-        PubFun::save_log($txt,'cron_'.$fileTag);
-    }
-
-
 
 ?>

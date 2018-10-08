@@ -8,6 +8,10 @@
 
 include 'lib/header.php';
 
+if(!SOCKET){
+    die('不开启聊天室接口，请手动打开聊天室接口！');
+}
+
 require_once(__CORE__ . '/lib/extend/chat/SocketChat.php');
 
 Chat::init();
