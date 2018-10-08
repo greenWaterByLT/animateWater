@@ -28,5 +28,11 @@ define('URL_WAY', 1);
 //数据库使用常量
 define('MYSQL_HOST_TYPE', 1);   //0-本地 1-虚拟机 2-其他:2018-6-15 只能连接虚拟机
 
+//脚本路径常量
+define('CRON', IMOOC.'/cron');
+
+//是否开启聊天室接口常量
+define('SOCKET', true);
+
 //全局常量
 include FUNCTION_CORE .'/config.php';

@@ -6,6 +6,7 @@ var ballFun = {
     //配置文件
     config:{
         ballNum:15,         //小球总数
+        ballConfig: {},     //小球配置
         r:60,               //小球半径
         ballClass:'ball',   //小球样式
         ballMinSpeed:1,     //小球最小速度
@@ -31,6 +32,10 @@ var ballFun = {
             //给小球加上唯一属性
             ball.ball_id = i + 1;
             ball.ball_symbol = 'ball_' + ball.ball_id;
+
+            //给小球加上后台配置属性
+            ball.config = ballFun.config.ballConfig[i+1];
+
             //小球半径
             ball.r = ballFun.config.r;
 
@@ -62,7 +67,7 @@ var ballFun = {
             ball.style.height = ball.r * 2 + 'px';
 
             //给小球内部加HTML内容 数组 的话 就给对应编号的小球加上 默认编号
-            ball.innerHTML = ballFun.ballAddHtml(ballFun.config.innerHTML, ball.ball_id);
+            ball.innerHTML = ballFun.ballAddHtml(ballFun.config.innerHTML, ball.config.title);
             //文字居中
             ball.style.textAlign = 'center';
             ball.style.lineHeight = ball.r * 2 + 'px';
@@ -266,8 +271,7 @@ var ballFun = {
     },
     callback:{
         onclick:function(ballObj){
-            console.log(ballObj.xspeed);
-            console.log(ballObj.yspeed);
+            window.location.href = ballObj.config.url;
         },
         onMouseOver:function(ballObj){
             ballObj.stop = true;

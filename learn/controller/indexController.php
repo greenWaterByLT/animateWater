@@ -7,12 +7,12 @@
  */
 namespace learn\controller;
 
+use core\lib\config;
 use core\lib\my\controller;
 use including\model;
 use including\model\userModel;
 use including\service;
 use including\service\PublicService;
-
 
 class indexController extends controller
 {
@@ -60,6 +60,10 @@ class indexController extends controller
     public function catalog()
     {
         $hash['title'] = '目录';
+
+        $catalogConfig = config::getConfig('catalog', 'project/catalog');
+        $hash['ballConfig'] = json_encode($catalogConfig);
+        $hash['ballNum'] = count($catalogConfig);
         $this->display($hash, 'catalog.html');
     }
 }

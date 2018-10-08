@@ -7,19 +7,23 @@
 {% endblock %}
 
 {% block body %}
-<div id="wrap">
+<div id="wrap" data="{{ ballNum }}">
 
 </div>
 <script type="text/javascript">
+    var ballNum = '{{ ballNum }}',
+        ballConfig = '{{ ballConfig }}';
+    ballConfig = stringHtmlChange.stringToJson(ballConfig);
 	ballFun.config = {
-		ballNum:10,         //小球总数
-		r:60,               //小球半径
-		ballClass:'',   	//小球样式
-		ballMinSpeed:1,     //小球最小速度
-		ballMaxSpeed:4,     //小球最大速度
-		isBackColor:false,   //小球背景颜色是否随机
-		innerHTML:false,    //小球内部HTML
-		opacity:1,           //小球透明度
+		ballNum: ballNum,                //小球总数
+        ballConfig: ballConfig,          //小球配置
+		r: 60,                           //小球半径
+		ballClass: '',   	             //小球样式
+		ballMinSpeed: 1,                 //小球最小速度
+		ballMaxSpeed: 4,                 //小球最大速度
+		isBackColor: false,             //小球背景颜色是否随机
+		innerHTML: false,               //小球内部HTML
+		opacity: 1,                      //小球透明度
 	};
 
 	ballFun.init('wrap');
